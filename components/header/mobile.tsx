@@ -3,7 +3,6 @@ import Support24Icon from "@/icons/header/24-support";
 import MenuIcon from "@/icons/header/menu";
 import Logo from "@/public/logo.svg";
 import { useEffect, useState } from "react";
-import { Slide } from "react-awesome-reveal";
 import dynamic from "next/dynamic";
 
 const Sidebar = dynamic(() => import("@/components/header/sidebar"),{ssr : false})
@@ -26,7 +25,7 @@ const MobileHeader = () => {
     },[]);
 
     return (
-        <div className="flex items-center justify-between px-10 py-4">
+        <div className="flex items-center justify-between px-6 py-4">
             <div className="flex items-center justify-start gap-2">
                 <div className="size-[36px] relative">
                     <Image 

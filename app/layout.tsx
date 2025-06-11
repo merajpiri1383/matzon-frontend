@@ -6,6 +6,26 @@ const Header = dynamic(() => import("@/components/header"),{ssr : true});
 
 
 
+const AnjomanFont = localFont({
+    src : [
+        {
+            path : "./fonts/Anjoman-Light.ttf",
+            style : 'normal',
+            weight : "400",
+        },{
+            path : "./fonts/Anjoman-Regular.ttf",
+            style : "normal",
+            weight : "500",
+        },{
+            path : "./fonts/Anjoman-Bold.ttf",
+            style : "normal",
+            weight : "700"
+        }
+    ],
+    display : "swap",
+    variable : "--anjoman-font"
+})
+
 const IranSansFont = localFont({
     src : [
         {
@@ -30,7 +50,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={IranSansFont.variable}>
+        <html lang="en" className={`${IranSansFont.variable} ${AnjomanFont.variable}`}>
             <body>
                 <Header />
                 {children}

@@ -5,7 +5,7 @@ import ProfileIcon from "@/icons/header/profile";
 const SidebarHeader = () => {
 
     return (
-        <div className="fixed top-0 bottom-0 right-0" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed top-0 bottom-0 right-0 z-10" onClick={(e) => e.stopPropagation()}>
             <Slide duration={400} direction="right" className="h-full bg-[#575251] w-full">
                 <div className="px-6 items-center justify-center [direction:rtl] font-medium text-[18px]
                 gap-[40px]">
