@@ -35,7 +35,7 @@ const MobileHeader = () => {
                         sizes="100%"
                     />
                 </div>
-                <p className="text-[#4F4F4F] text-[16px] font-black">متزون</p>
+                <p className="text-[#4F4F4F] text-[16px] font-black anjoman-font">متزون</p>
             </div>
             <div className="bg-[#545454] flex items-center justify-between p-[8px] rounded-[8px] 
                 cursor-pointer gap-[8px]" onClick={clickHandler}>
