@@ -1,29 +1,19 @@
 import React, { FC, useState } from "react";
 import ArrowDownIcon from "@/components/icons/home/arrowDown";
 import ArrowUpIcon from "@/components/icons/home/arrowUp";
-import Image,{ StaticImageData } from "next/image";
-
-interface ServiceMobileTag {
-    icon : React.ReactElement,
-    text : string,
-}
-
-interface ServiceMobileProps {
-    title: string,
-    bg_color: string,
-    logo: StaticImageData,
-    text : string,
-    tags : ServiceMobileTag[],
-    bg_image : StaticImageData,
-}
+import Image from "next/image";
+import { type ServiceProps } from "@/app/components/services";
 
 
-const ServiceMobile: FC<ServiceMobileProps> = (props) => {
+
+const ServiceMobile: FC<ServiceProps> = (props) => {
 
     const [open, setOpen] = useState<true|false>(false);
 
     return (
-        <div className={`bg-[${props.bg_color}] p-[16px] my-4 relative rounded-[8px] overflow-hidden`}>
+        <div
+            style={{backgroundColor : props.bg_color}} 
+            className={` p-[16px] my-4 relative rounded-[8px] overflow-hidden`}>
 
             <Image 
                 src={props.bg_image}
