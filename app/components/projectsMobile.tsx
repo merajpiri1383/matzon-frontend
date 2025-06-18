@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/pagination';
-import StarIcon from "@/components/icons/home/star";
-import LeftArrowCircleIcon from "@/components/icons/home/leftArrowCircle";
 import { ProjectType } from "@/app/components/projects";
 import { FC, useEffect, useRef, useState } from "react";
 import ArrowLeftTriangle from "@/components/icons/home/arrowLeftTriangle";
@@ -72,22 +70,7 @@ interface Props {
 
 const ProjectsMobile: FC<Props> = ({ projects }) => {
     return (
-        <div className="m-6 mt-20 py-6">
-            <div className="flex items-center justify-between [direction:rtl]">
-                <div className="flex items-center justify-center gap-[8px]">
-                    <div className="size-[20px]">
-                        <StarIcon />
-                    </div>
-                    <p className="anjoman-font font-semibold text-[20px] text-[#434343]">پروژه های متزون</p>
-                </div>
-
-                <div className="flex items-center justify-center gap-[8px]">
-                    <div className="size-[20px]">
-                        <LeftArrowCircleIcon />
-                    </div>
-                    <p className="text-[#4F4F4F] font-semibold text-[12px]">همه پروژه ها</p>
-                </div>
-            </div>
+        <div className="mx-6 pb-6">
 
             <Swiper
                 slidesPerView={1}

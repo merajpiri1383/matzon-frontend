@@ -7,7 +7,10 @@ import WifiSquare from "@/components/icons/home/wifiSquare";
 import SearchBoxIcon from "@/components/icons/home/searchBox";
 import DesignTools from "@/components/icons/home/designTools";
 import { StaticImageData } from "next/image";
+import LeftArrowCircleIcon from "@/components/icons/home/leftArrowCircle";
+import StarIcon from "@/components/icons/home/star";
 const ProjectsMobile = dynamic(() => import("@/app/components/projectsMobile"), { ssr: false });
+const ProjectsDesktop = dynamic(() => import("@/app/components/projectDesktop"),{ssr : false});
 
 interface TagType {
     icon : React.ReactNode,
@@ -126,12 +129,29 @@ const Projects = () => {
     ];
 
     return (
-        <>
+        <div className="py-6">
+
+            <div className="flex items-center justify-between [direction:rtl] mx-6 md:mx-20">
+                <div className="flex items-center justify-center gap-[8px]">
+                    <div className="size-[20px] md:size-[30px]">
+                        <StarIcon />
+                    </div>
+                    <p className="anjoman-font font-semibold text-[20px] text-[#434343]
+                        md:text-[32px]">پروژه های متزون</p>
+                </div>
+
+                <div className="flex items-center justify-center gap-[8px]">
+                    <div className="size-[20px] md:size-[24px]">
+                        <LeftArrowCircleIcon />
+                    </div>
+                    <p className="text-[#4F4F4F] font-semibold text-[12px] md:text-[20px]">همه پروژه ها</p>
+                </div>
+            </div>
             {
                 deviceType === "desktop" ?
-                    "" :
+                    <ProjectsDesktop projects={projects} /> :
                     <ProjectsMobile projects={projects} />
             }
-        </>
+        </div>
     )
 }; export default Projects;

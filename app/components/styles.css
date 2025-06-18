@@ -1,16 +1,18 @@
 .swiper-pagination-bullet {
     background-color: #8a8a8a !important;
     height: 12px !important;
-    width:  12px !important;
+    width: 12px !important;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
     background-color: #868686 !important;
 }
+
 .swiper-pagination {
     position: absolute !important;
     width: 100px !important;
     bottom: 0px;
+    overflow: hidden;
 }
 
 .project-mobile-hide {
@@ -23,4 +25,18 @@
     height: var(--height-show);
     transition: 400ms;
     overflow: hidden;
+}
+
+@media only screen and (min-width : 768px) {
+    .swiper-pagination-bullet {
+        height: 20px !important;
+        width: 20px !important;
+    }
+
+    .swiper-pagination {
+        position: absolute !important;
+        width: 100% !important;
+        bottom: 0px;
+        overflow: hidden;
+    }
 }
