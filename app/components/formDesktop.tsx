@@ -8,7 +8,7 @@ import UploadIcon from "@/components/icons/home/upload";
 
 const FormDesktop = () => {
     return (
-        <div className="grid grid-cols-5 bg-gray-400/65 gap-2">
+        <div className="grid grid-cols-5 bg-gray-400/65 gap-2 my-24">
             <div className="col-span-3 bg-[#4C4C4C] [direction:rtl] p-10 relative">
                 <Image 
                     src={BgFormImage}

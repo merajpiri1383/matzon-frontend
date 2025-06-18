@@ -1,0 +1,26 @@
+.swiper-pagination-bullet {
+    background-color: #8a8a8a !important;
+    height: 12px !important;
+    width:  12px !important;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #868686 !important;
+}
+.swiper-pagination {
+    position: absolute !important;
+    width: 100px !important;
+    bottom: 0px;
+}
+
+.project-mobile-hide {
+    height: 100px;
+    transition: 400ms;
+    overflow: hidden;
+}
+
+.project-mobile-show {
+    height: var(--height-show);
+    transition: 400ms;
+    overflow: hidden;
+}
