@@ -40,3 +40,29 @@
         overflow: hidden;
     }
 }
+
+@keyframes FaqOpen {
+    from {
+        height: 0px;
+    }
+    to {
+        height: var(--faq-height);
+    }
+}
+
+@keyframes FaqClose {
+    from {
+        height: var(--faq-height);
+    }
+    to {
+        height: 0px;
+    }
+}
+
+.faq-open {
+    animation: FaqOpen both 400ms;
+}
+
+.faq-close {
+    animation: FaqClose both 400ms;
+}

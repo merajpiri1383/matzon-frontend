@@ -6,6 +6,7 @@ const Services = dynamic(() => import("@/app/components/services"),{ssr : true})
 const Form = dynamic(() => import("@/app/components/form"),{ssr : true});
 const Projects = dynamic(() => import("@/app/components/projects"),{ssr : true});
 const Why = dynamic(() => import("@/app/components/why"),{ssr : true});
+const Faqs = dynamic(() => import("@/app/components/faqs"),{ssr : true});
 
 const Page = () => {
     return (
@@ -15,6 +16,7 @@ const Page = () => {
             <Form />
             <Projects />
             <Why />
+            <Faqs />
         </div>
     )
 }; export default Page;
