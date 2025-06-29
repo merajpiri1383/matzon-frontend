@@ -76,7 +76,7 @@ const Blog = () => {
 
             {
                 deviceType === "desktop" ? 
-                <BlogDesktop /> : 
+                <BlogDesktop blogs={blogs} /> : 
                 <BlogMobile blogs={blogs} />
             }
         </div>
