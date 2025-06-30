@@ -39,7 +39,7 @@ const Faq :FC<FaqType> = ({a,q}) => {
             <p  ref={ref} 
                 className={`${open ? "faq-open" : "faq-close"} overflow-hidden my-2
                 text-[#4F4F4F] font-regular text-[12px] text-justify md:text-[20px]
-                w-[80%]`}>{a}</p>
+                md:w-[80%]`}>{a}</p>
         </div>
     )
 }

@@ -3,6 +3,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import dynamic from "next/dynamic";
 const Header = dynamic(() => import("@/components/header"),{ssr : true});
+const Footer = dynamic(() => import("@/components/footer"),{ssr : true});
 
 
 
@@ -54,6 +55,7 @@ export default function RootLayout({
             <body>
                 <Header />
                 {children}
+                <Footer />
             </body>
         </html>
     );
